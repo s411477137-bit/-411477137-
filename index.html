@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StudyMate｜把今天慢慢完成</title>
+<style>
+:root{--cream:#fbf7ef;--paper:#fffdf8;--ink:#39372f;--muted:#858176;--line:#eee5d7;--peach:#f2d7c5;--green:#dce8d7;--yellow:#f5e8b9;--lav:#e7e0f1;--accent:#8b9d79;--shadow:0 12px 32px #6b55300c}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font-family:ui-rounded,"Noto Sans TC",system-ui,-apple-system,sans-serif;line-height:1.55}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:12px;padding:10px 14px;background:var(--ink);color:white;transition:.18s}button:hover{transform:translateY(-1px);filter:brightness(1.05)}button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #b4c6a4;outline-offset:2px}.secondary{background:#f3eee4;color:var(--ink)}.small{padding:6px 9px;font-size:.86rem}.danger{background:#f7e3df;color:#8e4941}.app{max-width:1180px;margin:auto;padding:24px 20px 44px}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px}.logo{width:46px;height:46px;border-radius:16px;background:var(--green);display:grid;place-items:center;font-size:25px}.brand h1{font-size:1.25rem;margin:0}.brand p{margin:1px 0 0;color:var(--muted);font-size:.85rem}.date-chip{padding:9px 13px;border:1px solid var(--line);border-radius:999px;background:var(--paper);font-size:.9rem}.hero{background:var(--paper);border:1px solid var(--line);border-radius:26px;padding:28px;display:grid;grid-template-columns:1.4fr .6fr;gap:20px;align-items:center;box-shadow:var(--shadow);position:relative;overflow:hidden}.eyebrow{font-size:.78rem;letter-spacing:.12em;color:#7b8d6d;font-weight:800}.hero h2{font-size:clamp(1.65rem,4vw,2.35rem);line-height:1.25;margin:8px 0}.hero p{color:var(--muted);margin:0;max-width:520px}.hero-art{justify-self:center;background:#f7eee0;border-radius:50%;width:155px;height:155px;display:grid;place-items:center;font-size:76px;transform:rotate(4deg)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:18px 0 24px}.stat{padding:17px 18px;background:var(--paper);border:1px solid var(--line);border-radius:19px;display:flex;gap:12px;align-items:center}.stat-icon{width:43px;height:43px;border-radius:14px;display:grid;place-items:center;font-size:21px}.stat:nth-child(1) .stat-icon{background:var(--yellow)}.stat:nth-child(2) .stat-icon{background:var(--green)}.stat:nth-child(3) .stat-icon{background:var(--lav)}.stat small{display:block;color:var(--muted)}.stat strong{font-size:1.5rem;line-height:1.2}.layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(280px,.8fr);gap:18px;align-items:start}.panel{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow);min-width:0}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:16px}.panel h3{font-size:1.12rem;margin:0}.sub{font-size:.85rem;color:var(--muted);margin:3px 0 0}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{display:flex;flex-direction:column;gap:5px;font-size:.85rem;color:#6f6a60}.field.full{grid-column:1/-1}.field input,.field select,.field textarea,.search{border:1px solid var(--line);background:#fffefa;border-radius:11px;padding:10px 11px;color:var(--ink);width:100%;min-width:0}.field textarea{resize:vertical;min-height:65px}.form-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}.progress-wrap{margin:14px 0 17px}.progress-label{display:flex;justify-content:space-between;font-size:.85rem;color:var(--muted);margin-bottom:7px}.track{height:9px;background:#f0eadf;border-radius:99px;overflow:hidden}.bar{height:100%;width:0;background:#9fb18e;border-radius:99px;transition:width .25s}.filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}.filter{background:#f5f0e7;color:#777064;padding:7px 11px;font-size:.83rem}.filter.active{background:var(--green);color:#3d5337}.task-list{display:flex;flex-direction:column;gap:9px}.task{display:flex;gap:11px;align-items:flex-start;padding:13px;border:1px solid var(--line);border-radius:15px;background:#fffefa}.task.done{opacity:.65;background:#faf8f2}.check{width:22px;height:22px;accent-color:#829772;flex:none;margin-top:2px;cursor:pointer}.task-main{min-width:0;flex:1}.task-title{font-weight:700;overflow-wrap:anywhere}.done .task-title{text-decoration:line-through}.task-meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;font-size:.76rem;color:var(--muted)}.pill{border-radius:999px;padding:3px 8px;background:#f3eee4}.priority-high{background:#f8dfd7;color:#8c4a3b}.priority-medium{background:#f6e9bd;color:#7d682c}.priority-low{background:#e2eddd;color:#4c6947}.overdue{color:#b34c40;font-weight:700}.task-actions{display:flex;gap:5px}.icon-btn{background:transparent;color:#8a8376;padding:5px 7px;font-size:1rem}.icon-btn:hover{background:#f3eee4;transform:none}.empty{text-align:center;padding:30px 12px;color:var(--muted)}.empty span{font-size:2.4rem;display:block;margin-bottom:7px}.side-stack{display:flex;flex-direction:column;gap:18px}.quote{background:#f5eee1;border-radius:16px;padding:16px;margin-top:13px}.quote p{margin:0;font-weight:650}.quote small{color:var(--muted)}.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:14px}.day{background:#f8f3ea;border-radius:10px;padding:8px 2px;text-align:center;font-size:.72rem;color:var(--muted)}.day strong{display:block;font-size:.95rem;color:var(--ink);margin-top:4px}.day.today{background:var(--green);color:#496342}.day.has-task:after{content:"•";display:block;color:#8b9d79;font-size:1rem;line-height:.7}.notes{width:100%;min-height:100px;resize:vertical;border:1px solid var(--line);background:#fffefa;border-radius:12px;padding:12px;color:var(--ink)}.note-status{font-size:.8rem;color:var(--muted);margin-top:6px;min-height:1.2em}.footer{text-align:center;color:#a19a8c;font-size:.8rem;padding-top:25px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#39372f;color:#fff;padding:11px 17px;border-radius:12px;opacity:0;pointer-events:none;transition:.25s;z-index:5;box-shadow:var(--shadow)}.toast.show{opacity:1;transform:translate(-50%,0)}.modal-backdrop{position:fixed;inset:0;background:#28251e66;display:none;place-items:center;padding:18px;z-index:10}.modal-backdrop.open{display:grid}.modal{width:min(100%,460px);background:var(--paper);border-radius:22px;padding:23px}.modal h3{margin-top:0}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
+@media(max-width:760px){.app{padding:16px 13px 30px}.hero{padding:22px;grid-template-columns:1fr}.hero-art{display:none}.stats{gap:8px}.stat{padding:12px 9px;gap:7px;align-items:flex-start;flex-direction:column}.stat-icon{width:35px;height:35px}.stat strong{font-size:1.25rem}.layout{grid-template-columns:1fr}.panel{padding:17px}.top{align-items:flex-start}.date-chip{font-size:.78rem}.task-actions{flex-direction:column}.form-grid{grid-template-columns:1fr 1fr}}@media(max-width:390px){.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.stats{grid-template-columns:1fr 1fr}.stat:last-child{grid-column:1/-1;flex-direction:row;align-items:center}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+  <div class="brand"><div class="logo" aria-hidden="true">🌱</div><div><h1>StudyMate</h1><p>把今天，慢慢完成。</p></div></div>
+  <div class="date-chip" id="todayLabel">📅 今天</div>
+</header>
+<section class="hero">
+  <div><div class="eyebrow">A LITTLE PROGRESS EVERY DAY</div><h2 id="greeting">嗨，今天也一起加油！</h2><p>不用一次完成所有事，先從一件小事開始。每一個勾選，都是你努力過的證明。</p></div>
+  <div class="hero-art" aria-hidden="true">☕️</div>
+</section>
+<section class="stats" aria-label="任務統計">
+  <div class="stat"><div class="stat-icon">📝</div><div><small>今日待辦</small><strong id="todayCount">0</strong></div></div>
+  <div class="stat"><div class="stat-icon">🌿</div><div><small>已完成</small><strong id="doneCount">0</strong></div></div>
+  <div class="stat"><div class="stat-icon">✨</div><div><small>整體完成率</small><strong id="rateCount">0%</strong></div></div>
+</section>
+<div class="layout">
+<main class="panel">
+  <div class="panel-head"><div><h3 id="formHeading">＋ 新增一個任務</h3><p class="sub">把想做的事寫下來，逐一完成吧！</p></div><button class="secondary small" id="demoBtn" type="button">載入示範任務</button></div>
+  <form id="taskForm">
+    <div class="form-grid">
+      <label class="field full">任務名稱 *
+        <input id="taskTitle" maxlength="100" required placeholder="例如：複習會計學第一章">
+      </label>
+      <label class="field">任務類別
+        <select id="taskCategory"><option>課業</option><option>考試</option><option>報告</option><option>社團</option><option>生活</option><option>其他</option></select>
+      </label>
+      <label class="field">優先程度
+        <select id="taskPriority"><option value="high">高優先</option><option value="medium" selected>普通</option><option value="low">低優先</option></select>
+      </label>
+      <label class="field">截止日期
+        <input type="date" id="taskDate">
+      </label>
+      <label class="field">預計時間（分鐘）
+        <input type="number" id="taskMinutes" min="0" max="1440" step="5" placeholder="例如：30">
+      </label>
+    </div>
+    <div class="form-actions"><button type="submit" id="submitBtn">新增任務</button><button class="secondary" type="button" id="cancelEdit" hidden>取消編輯</button></div>
+  </form>
+  <div class="progress-wrap"><div class="progress-label"><span>今天的進度</span><strong id="progressText">0 / 0 完成</strong></div><div class="track" role="progressbar" aria-label="今日任務完成率" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progressTrack"><div class="bar" id="progressBar"></div></div></div>
+  <div class="panel-head"><div><h3>我的任務清單</h3><p class="sub">依狀態篩選，讓事情更清楚。</p></div></div>
+  <input class="search" id="searchInput" type="search" placeholder="🔎 搜尋任務名稱或類別…" aria-label="搜尋任務">
+  <div class="filters" role="group" aria-label="任務篩選" style="margin-top:11px">
+    <button type="button" class="filter active" data-filter="all">全部</button><button type="button" class="filter" data-filter="active">未完成</button><button type="button" class="filter" data-filter="done">已完成</button><button type="button" class="filter" data-filter="today">今天到期</button><button type="button" class="filter" data-filter="overdue">已逾期</button>
+  </div>
+  <div class="task-list" id="taskList" aria-live="polite"></div>
+</main>
+<aside class="side-stack">
+  <section class="panel"><div class="panel-head"><div><h3>🗓️ 本週小日曆</h3><p class="sub">看看這週有哪些安排</p></div></div><div id="weekLabel" class="sub"></div><div class="week" id="weekGrid"></div><div class="quote"><p id="quoteText">「慢慢來，比較快。」</p><small id="quoteAuthor">— 給努力中的你</small></div></section>
+  <section class="panel"><div class="panel-head"><div><h3>☁️ 今日小筆記</h3><p class="sub">記下提醒、靈感或給自己的話。</p></div></div><textarea id="dailyNote" class="notes" maxlength="1000" placeholder="今天最重要的事是……"></textarea><div class="note-status" id="noteStatus">筆記會自動儲存在這個瀏覽器。</div><div class="form-actions"><button class="secondary small" id="clearNote" type="button">清空筆記</button></div></section>
+  <section class="panel"><div class="panel-head"><div><h3>📦 我的資料</h3><p class="sub">資料儲存在目前使用的瀏覽器中。</p></div></div><p class="sub">你可以匯出任務備份，或在換裝置時匯入 JSON 檔案。</p><div class="form-actions"><button class="secondary small" id="exportBtn" type="button">匯出備份</button><button class="secondary small" id="importBtn" type="button">匯入備份</button><input type="file" id="importFile" accept=".json,application/json" hidden></div><div class="form-actions"><button class="danger small" id="resetBtn" type="button">清除所有任務</button></div></section>
+</aside>
+</div>
+<footer class="footer">Made with ☕ and a little bit of courage · StudyMate</footer>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="modal-backdrop" id="confirmModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal"><h3 id="modalTitle">確定要繼續嗎？</h3><p id="modalMessage">這個操作無法復原。</p><div class="modal-actions"><button class="secondary" id="modalCancel" type="button">再想一下</button><button id="modalConfirm" type="button">確定</button></div></div></div>
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const STORAGE_KEY='studymate_tasks_v1', NOTE_KEY='studymate_note_v1';
+let tasks=[], filter='all', editingId=null, pendingAction=null, toastTimer=null;
+const todayISO=()=>{const d=new Date();return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`};
+const dateObj=s=>{if(!s)return null;const d=new Date(s+'T00:00:00');return Number.isNaN(d.getTime())?null:d};
+const fmtDate=s=>{const d=dateObj(s);return d?`${d.getMonth()+1}/${d.getDate()}`:''};
+const escapeHTML=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const uid=()=>`${Date.now().toString(36)}${Math.random().toString(36).slice(2,8)}`;
+function showToast(msg){$('toast').textContent=msg;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2300)}
+function save(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(tasks))}catch(e){showToast('無法儲存資料，請檢查瀏覽器儲存設定。')}}
+function load(){try{const raw=localStorage.getItem(STORAGE_KEY);const data=raw?JSON.parse(raw):[];tasks=Array.isArray(data)?data.filter(t=>t&&typeof t.title==='string'&&t.id):[]}catch(e){tasks=[]}try{$('dailyNote').value=localStorage.getItem(NOTE_KEY)||''}catch(e){}}
+function priorityText(p){return p==='high'?'高優先':p==='low'?'低優先':'普通'}
+function isOverdue(t){return !t.done&&t.date&&t.date<todayISO()}
+function renderStats(){
+ const today=tasks.filter(t=>t.date===todayISO()),doneToday=today.filter(t=>t.done).length,done=tasks.filter(t=>t.done).length,rate=tasks.length?Math.round(done/tasks.length*100):0;
+ $('todayCount').textContent=today.length;$('doneCount').textContent=done;$('rateCount').textContent=rate+'%';$('progressText').textContent=`${doneToday} / ${today.length} 完成`;
+ const pct=today.length?Math.round(doneToday/today.length*100):0;$('progressBar').style.width=pct+'%';$('progressTrack').setAttribute('aria-valuenow',pct);
+}
+function taskCard(t){
+ const overdue=isOverdue(t),dateText=t.date?(overdue?'逾期 · ':'截止 · ')+fmtDate(t.date):'未設定期限';
+ return `<article class="task ${t.done?'done':''}">
+ <input class="check" type="checkbox" aria-label="完成任務：${escapeHTML(t.title)}" data-action="toggle" data-id="${escapeHTML(t.id)}" ${t.done?'checked':''}>
+ <div class="task-main"><div class="task-title">${escapeHTML(t.title)}</div><div class="task-meta"><span class="pill">${escapeHTML(t.category||'其他')}</span><span class="pill priority-${escapeHTML(t.priority||'medium')}">${priorityText(t.priority)}</span><span class="${overdue?'overdue':''}">${dateText}</span>${t.minutes?`<span>⏱ ${Number(t.minutes)} 分鐘</span>`:''}</div></div>
+ <div class="task-actions"><button class="icon-btn" type="button" data-action="edit" data-id="${escapeHTML(t.id)}" aria-label="編輯 ${escapeHTML(t.title)}" title="編輯">✎</button><button class="icon-btn" type="button" data-action="delete" data-id="${escapeHTML(t.id)}" aria-label="刪除 ${escapeHTML(t.title)}" title="刪除">×</button></div></article>`;
+}
+function renderTasks(){
+ const q=$('searchInput').value.trim().toLowerCase();
+ const shown=tasks.filter(t=>{
+  const matches=!q||t.title.toLowerCase().includes(q)||(t.category||'').toLowerCase().includes(q);
+  const byFilter=filter==='all'||(filter==='active'&&!t.done)||(filter==='done'&&t.done)||(filter==='today'&&t.date===todayISO())||(filter==='overdue'&&isOverdue(t));
+  return matches&&byFilter;
+ }).sort((a,b)=>Number(a.done)-Number(b.done)||({'high':0,'medium':1,'low':2}[a.priority]??1)-({'high':0,'medium':1,'low':2}[b.priority]??1)||(a.date||'9999').localeCompare(b.date||'9999'));
+ $('taskList').innerHTML=shown.length?shown.map(taskCard).join(''):`<div class="empty"><span>${q||filter!=='all'?'🔎':'🌷'}</span><strong>${q||filter!=='all'?'找不到符合條件的任務':'今天先從一件小事開始吧！'}</strong><div class="sub">${q||filter!=='all'?'試試其他關鍵字或篩選條件。':'新增任務後，就會出現在這裡。'}</div></div>`;
+ renderStats();renderWeek();
+}
+function renderWeek(){
+ const now=new Date(),day=now.getDay(),monday=new Date(now);monday.setDate(now.getDate()+(day===0?-6:1-day));monday.setHours(0,0,0,0);
+ const days=['一','二','三','四','五','六','日'];
+ $('weekLabel').textContent=`${monday.getFullYear()} 年 ${monday.getMonth()+1} 月`;
+ $('weekGrid').innerHTML=Array.from({length:7},(_,i)=>{const d=new Date(monday);d.setDate(monday.getDate()+i);const iso=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;const count=tasks.filter(t=>t.date===iso&&!t.done).length;return `<div class="day ${iso===todayISO()?'today':''} ${count?'has-task':''}" title="${count} 個未完成任務">${days[i]}<strong>${d.getDate()}</strong></div>`}).join('');
+}
+function resetForm(){editingId=null;$('taskForm').reset();$('taskPriority').value='medium';$('formHeading').textContent='＋ 新增一個任務';$('submitBtn').textContent='新增任務';$('cancelEdit').hidden=true}
+function editTask(id){const t=tasks.find(x=>x.id===id);if(!t)return;editingId=id;$('taskTitle').value=t.title;$('taskCategory').value=t.category||'其他';$('taskPriority').value=t.priority||'medium';$('taskDate').value=t.date||'';$('taskMinutes').value=t.minutes||'';$('formHeading').textContent='✎ 編輯任務';$('submitBtn').textContent='儲存修改';$('cancelEdit').hidden=false;$('taskTitle').focus();window.scrollTo({top:0,behavior:'smooth'})}
+function openConfirm(title,message,action,label='確定'){ $('modalTitle').textContent=title;$('modalMessage').textContent=message;$('modalConfirm').textContent=label;pendingAction=action;$('confirmModal').classList.add('open');$('modalCancel').focus()}
+function closeConfirm(){$('confirmModal').classList.remove('open');pendingAction=null}
+$('taskForm').addEventListener('submit',e=>{e.preventDefault();const title=$('taskTitle').value.trim();if(!title){$('taskTitle').focus();return}const date=$('taskDate').value;if(date&&!dateObj(date)){showToast('請輸入有效的截止日期。');return}const minutes=$('taskMinutes').value;if(minutes!==''&&(!Number.isFinite(Number(minutes))||Number(minutes)<0||Number(minutes)>1440)){showToast('預計時間需介於 0 到 1440 分鐘。');return}
+ const data={title,category:$('taskCategory').value,priority:$('taskPriority').value,date,minutes:minutes===''?0:Number(minutes)};
+ if(editingId){const t=tasks.find(x=>x.id===editingId);if(t)Object.assign(t,data);showToast('任務已更新 ✨')}else{tasks.push({id:uid(),...data,done:false,createdAt:new Date().toISOString()});showToast('新增成功，慢慢完成就好 🌱')}
+ save();resetForm();renderTasks();
+});
+$('cancelEdit').addEventListener('click',resetForm);
+$('taskList').addEventListener('change',e=>{const el=e.target.closest('[data-action="toggle"]');if(!el)return;const t=tasks.find(x=>x.id===el.dataset.id);if(t){t.done=el.checked;save();renderTasks();showToast(t.done?'做得好！又完成一件事 🌷':'已將任務標記為未完成')}})
+$('taskList').addEventListener('click',e=>{const b=e.target.closest('button[data-action]');if(!b)return;const id=b.dataset.id;if(b.dataset.action==='edit')editTask(id);if(b.dataset.action==='delete'){const t=tasks.find(x=>x.id===id);if(t)openConfirm('刪除這個任務？',`「${t.title}」將會從清單中移除。`,()=>{tasks=tasks.filter(x=>x.id!==id);if(editingId===id)resetForm();save();renderTasks();showToast('任務已刪除')},'刪除')}})
+document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));renderTasks()}));
+$('searchInput').addEventListener('input',renderTasks);
+$('demoBtn').addEventListener('click',()=>{if(tasks.some(t=>t.demo)){showToast('示範任務已經載入過囉。');return}const d=todayISO();tasks.push({id:uid(),title:'複習會計學第一章',category:'課業',priority:'high',date:d,minutes:30,done:false,demo:true},{id:uid(),title:'整理小組報告資料',category:'報告',priority:'medium',date:d,minutes:45,done:false,demo:true},{id:uid(),title:'回覆社團活動訊息',category:'社團',priority:'low',date:'',minutes:10,done:true,demo:true},{id:uid(),title:'準備下週統計小考',category:'考試',priority:'high',date:(()=>{const x=new Date();x.setDate(x.getDate()+3);return `${x.getFullYear()}-${String(x.getMonth()+1).padStart(2,'0')}-${String(x.getDate()).padStart(2,'0')}`})(),minutes:60,done:false,demo:true});save();renderTasks();showToast('示範任務已加入，可以試著勾選或編輯！')});
+$('dailyNote').addEventListener('input',()=>{try{localStorage.setItem(NOTE_KEY,$('dailyNote').value);$('noteStatus').textContent='已自動儲存 ✓'}catch(e){$('noteStatus').textContent='目前無法儲存筆記。'}});
+$('clearNote').addEventListener('click',()=>openConfirm('清空今日筆記？','目前的筆記內容將會被清除。',()=>{ $('dailyNote').value='';try{localStorage.removeItem(NOTE_KEY)}catch(e){}$('noteStatus').textContent='筆記已清空';showToast('筆記已清空')} ,'清空'));
+$('exportBtn').addEventListener('click',()=>{const payload={app:'StudyMate',version:1,exportedAt:new Date().toISOString(),tasks,note:$('dailyNote').value};const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=`studymate-backup-${todayISO()}.json`;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);showToast('備份檔已準備下載。')});
+$('importBtn').addEventListener('click',()=>$('importFile').click());
+$('importFile').addEventListener('change',async e=>{const file=e.target.files&&e.target.files[0];if(!file)return;try{const obj=JSON.parse(await file.text());const arr=Array.isArray(obj)?obj:obj.tasks;if(!Array.isArray(arr))throw Error('格式不正確');const valid=arr.filter(t=>t&&typeof t.title==='string'&&t.title.trim()).map(t=>({id:typeof t.id==='string'?t.id:uid(),title:t.title.slice(0,100),category:['課業','考試','報告','社團','生活','其他'].includes(t.category)?t.category:'其他',priority:['high','medium','low'].includes(t.priority)?t.priority:'medium',date:typeof t.date==='string'&&/^\d{4}-\d{2}-\d{2}$/.test(t.date)?t.date:'',minutes:Number.isFinite(Number(t.minutes))?Math.max(0,Math.min(1440,Number(t.minutes))):0,done:!!t.done}));openConfirm('匯入備份？',`將以備份中的 ${valid.length} 個任務取代目前的任務清單。`,()=>{tasks=valid;save();if(typeof obj.note==='string'){$('dailyNote').value=obj.note;try{localStorage.setItem(NOTE_KEY,obj.note)}catch(e){}}renderTasks();showToast('備份匯入完成。')},'匯入')}catch(err){showToast('匯入失敗：請選擇有效的 StudyMate JSON 備份。')}finally{e.target.value=''}});
+$('resetBtn').addEventListener('click',()=>openConfirm('清除所有任務？','所有任務將從這個瀏覽器移除，這個操作無法復原。建議先匯出備份。',()=>{tasks=[];resetForm();save();renderTasks();showToast('任務清單已清空。')},'全部清除'));
+$('modalCancel').addEventListener('click',closeConfirm);$('modalConfirm').addEventListener('click',()=>{const action=pendingAction;closeConfirm();if(action)action()});$('confirmModal').addEventListener('click',e=>{if(e.target===$('confirmModal'))closeConfirm()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeConfirm()});
+const now=new Date();$('todayLabel').textContent='📅 '+new Intl.DateTimeFormat('zh-TW',{year:'numeric',month:'long',day:'numeric',weekday:'short'}).format(now);
+const hour=now.getHours();$('greeting').textContent=hour<11?'早安，今天也一起加油！':hour<18?'嗨，今天也一起加油！':'辛苦了，今天也很棒！';
+const quotes=[['「慢慢來，比較快。」','— 給努力中的你'],['「完成比完美更重要。」','— 今天的小提醒'],['「每一步都算數。」','— 給正在努力的你'],['「休息一下，也是計畫的一部分。」','— 記得照顧自己']];
+const q=quotes[now.getDate()%quotes.length];$('quoteText').textContent=q[0];$('quoteAuthor').textContent=q[1];
+load();renderTasks();
+})();
+</script>
+</body>
+</html>
